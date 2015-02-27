@@ -22,7 +22,7 @@ You want to **create a new SPA but you don't want to depend on any framework** l
 
 Just run `npm install` to get all the dependencies and then use:
 
-* **`npm run start-dev`**: Spins up a server on `localhost:3000` with Watch for CSS and JS files.
+* **`npm run watch`**: Spins up a server on `localhost:3000` with Watch for CSS and JS files.
 * **`npm run start`**: Creates `build/` files and spins up a server on `localhost:3000`. No watch in this case!
 
 You can see the other tasks you can run in the [package.json scripts](https://github.com/mgonto/react-browserify-spa-seed/blob/master/package.json#L18-L29)
