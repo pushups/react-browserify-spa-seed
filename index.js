@@ -1,5 +1,0 @@
-/**
- * Initialize.
- */
-
- require('./lib/boot');
