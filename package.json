@@ -36,7 +36,11 @@
   "dependencies": {
     "bootstrap": "^3.3.0",
     "flux": "^2.0.1",
-    "react": "^0.13.1"
+    "jwt-decode": "^1.1.0",
+    "react-mixin": "^1.1.0",
+    "react-router": "^0.13.2",
+    "reqwest": "^1.1.5",
+    "when": "^3.7.2"
   },
   "devDependencies": {
     "babelify": "^6.0.2",

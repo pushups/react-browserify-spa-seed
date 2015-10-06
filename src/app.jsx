@@ -1,7 +1,29 @@
-import Home from './components/Home';
 import React from 'react';
+import Router, {Route} from 'react-router';
+import AuthenticatedApp from './components/AuthenticatedApp'
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Home from './components/Home';
+import RouterContainer from './services/RouterContainer';
 
-React.render(
-  <Home />,
-  document.getElementById('content')
-);
+var routes = (
+  <Route handler={AuthenticatedApp}>
+    <Route name="login" handler={Login}/>
+    <Route name="signup" handler={Signup}/>
+    <Route name="home" path="/" handler={Home}/>
+  </Route>
+)
+
+var router = Router.create({routes});
+RouterContainer.set(router);
+
+let jwt = localStorage.getItem('jwt');
+
+if (jwt) {
+  LoginActions.loginUser(jwt);
+}
+
+router.run(function (Handler) {
+  console.log(Handler);
+  React.render(<Handler />, document.getElementById('content'));
+});
